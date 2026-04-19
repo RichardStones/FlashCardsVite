@@ -1,0 +1,231 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: var(--space-lg);
+  gap: var(--space-lg);
+}
+
+.topBar {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  transition: color var(--transition-fast);
+}
+
+.back:hover {
+  color: var(--color-primary-dark);
+}
+
+.finishBtn {
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  font-size: var(--font-size-sm);
+}
+
+.finishBtn:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+.langs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.langBadge {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  padding: 2px 12px;
+  border-radius: var(--radius-lg);
+}
+
+.arrow {
+  color: var(--color-text-muted);
+}
+
+.cardArea {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.answerArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  min-height: 80px;
+}
+
+.flipHint {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.answerPrompt {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.answerBtns {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.btnWrong {
+  padding: var(--space-sm) var(--space-xl);
+  background: var(--color-danger);
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-md);
+  min-width: 120px;
+}
+
+.btnWrong:hover {
+  background: var(--color-danger-dark);
+}
+
+.btnCorrect {
+  padding: var(--space-sm) var(--space-xl);
+  background: var(--color-success);
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-md);
+  min-width: 120px;
+}
+
+.btnCorrect:hover {
+  background: var(--color-success-dark);
+}
+
+.progressArea {
+  width: 100%;
+  max-width: 500px;
+}
+
+.sessionStats {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* --- Summary screen --- */
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+  text-align: center;
+}
+
+.summaryTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-primary-dark);
+}
+
+.summaryStats {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.summaryNum {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.summaryNum.correct { color: var(--color-success); }
+.summaryNum.wrong   { color: var(--color-danger); }
+
+.summaryLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.summaryPct {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.summaryActions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-sm);
+}
+
+.btnPrimary {
+  padding: var(--space-sm) var(--space-xl);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+}
+
+.btnPrimary:hover {
+  background: var(--color-primary-dark);
+}
+
+.btnSecondary {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-xl);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border);
+  font-size: var(--font-size-base);
+}
+
+.btnSecondary:hover {
+  background: var(--color-surface-alt);
+}
+
+@media (max-width: 480px) {
+  .answerBtns {
+    gap: var(--space-md);
+  }
+
+  .btnWrong,
+  .btnCorrect {
+    min-width: 100px;
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-base);
+  }
+
+  .summaryStats {
+    gap: var(--space-lg);
+  }
+}
